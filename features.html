@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - InvoicePro | Smart Invoice & Billing Management</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                    <span class="brand-text">InvoicePro</span>
+                </a>
+                
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#home" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="solutions.html">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Right Side Buttons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Theme Toggle -->
+                        <button class="btn btn-link theme-toggle" id="themeToggle">
+                            <i class="bi bi-sun-fill fs-5"></i>
+                        </button>
+                        
+                        <!-- Auth Buttons -->
+                        <a href="signup.html" class="btn btn-outline-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <a href="index.html" class="offcanvas-title text-decoration-none">
+                    <i class="bi bi-receipt-cutoff text-primary fs-4 me-2"></i>
+                    InvoicePro
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#home" id="mobileHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mobileHomeDropdown">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+                
+                <div class="mt-4">
+                    <a href="signup.html" class="btn btn-outline-primary w-100">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-4">Powerful Features</h1>
+                    <p class="lead mb-4">Everything you need to manage your billing efficiently in one comprehensive platform</p>
+                    <div class="breadcrumb justify-content-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Features</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <h4>Invoice Generator</h4>
+                        <p>Create professional invoices in minutes with customizable templates and automatic calculations. Support for multiple currencies and tax rates.</p>
+                        <ul class="feature-list">
+                            <li>Customizable templates</li>
+                            <li>Automatic tax calculations</li>
+                            <li>Multi-currency support</li>
+                            <li>Recurring invoices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4>Client Management</h4>
+                        <p>Organize client information, track communication history, and manage relationships efficiently with our comprehensive CRM system.</p>
+                        <ul class="feature-list">
+                            <li>Client database</li>
+                            <li>Communication tracking</li>
+                            <li>Payment history</li>
+                            <li>Client portals</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <h4>Expense Tracking</h4>
+                        <p>Monitor business expenses, categorize costs, and maintain accurate financial records with real-time expense management.</p>
+                        <ul class="feature-list">
+                            <li>Expense categorization</li>
+                            <li>Receipt scanning</li>
+                            <li>Budget tracking</li>
+                            <li>Expense reports</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-bell"></i>
+                        </div>
+                        <h4>Payment Reminders</h4>
+                        <p>Automated payment reminders ensure you get paid on time, every time. Customize reminder schedules and templates.</p>
+                        <ul class="feature-list">
+                            <li>Automated reminders</li>
+                            <li>Custom templates</li>
+                            <li>Late fee calculations</li>
+                            <li>Payment tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4>Financial Reports</h4>
+                        <p>Generate detailed reports and gain insights into your business financial health with comprehensive analytics dashboards.</p>
+                        <ul class="feature-list">
+                            <li>Profit & loss statements</li>
+                            <li>Cash flow reports</li>
+                            <li>Custom reports</li>
+                            <li>Data export</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-receipt"></i>
+                        </div>
+                        <h4>Tax & GST Support</h4>
+                        <p>Automatic tax calculations and GST compliance for hassle-free billing across different regions and tax jurisdictions.</p>
+                        <ul class="feature-list">
+                            <li>Multi-region tax support</li>
+                            <li>GST/VAT calculations</li>
+                            <li>Tax reports</li>
+                            <li>Compliance tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features Section -->
+    <section class="advanced-features py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Advanced Capabilities</h2>
+                <p class="lead">Enterprise-grade features for growing businesses</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="advanced-feature-item">
+                        <div class="d-flex align-items-start">
+                            <div class="advanced-icon me-3">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                            <div>
+                                <h4>Online Payment Processing</h4>
+                                <p>Accept payments directly through invoices with support for major payment gateways including Stripe, PayPal, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advanced-feature-item">
+                        <div class="d-flex align-items-start">
+                            <div class="advanced-icon me-3">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <div>
+                                <h4>Time Tracking</h4>
+                                <p>Track billable hours and automatically generate invoices based on time entries with detailed project breakdowns.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advanced-feature-item">
+                        <div class="d-flex align-items-start">
+                            <div class="advanced-icon me-3">
+                                <i class="bi bi-link-45deg"></i>
+                            </div>
+                            <div>
+                                <h4>API & Integrations</h4>
+                                <p>Connect with your favorite tools through our RESTful API and pre-built integrations with accounting software.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="advanced-feature-item">
+                        <div class="d-flex align-items-start">
+                            <div class="advanced-icon me-3">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <div>
+                                <h4>Security & Compliance</h4>
+                                <p>Bank-level security with 256-bit encryption, SOC 2 compliance, and regular security audits to protect your data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advanced-feature-item">
+                        <div class="d-flex align-items-start">
+                            <div class="advanced-icon me-3">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <div>
+                                <h4>Team Collaboration</h4>
+                                <p>Collaborate with your team through role-based access, approval workflows, and real-time notifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advanced-feature-item">
+                        <div class="d-flex align-items-start">
+                            <div class="advanced-icon me-3">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <div>
+                                <h4>Multi-Language Support</h4>
+                                <p>Support for multiple languages and currencies to serve your global customer base effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="zoom-in">
+                    <h2 class="display-4 fw-bold mb-4">Ready to Experience These Features?</h2>
+                    <p class="lead mb-4">Start your free trial today and see how InvoicePro can transform your billing process.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#signup" class="btn btn-primary btn-lg">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Start Free Trial
+                        </a>
+                        <a href="pricing.html" class="btn btn-outline-primary btn-lg">
+                            View Pricing
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                            <span class="brand-text fs-4">InvoicePro</span>
+                        </div>
+                        <p class="mb-3">Professional billing and invoice management solution for modern businesses.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#api">API Docs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Stay Updated</h5>
+                    <p class="mb-3">Get the latest updates and tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom mt-4 pt-4 border-top">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2026 InvoicePro. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#privacy" class="footer-link">Privacy Policy</a>
+                        <a href="#terms" class="footer-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

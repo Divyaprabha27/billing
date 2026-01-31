@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - InvoicePro | Smart Invoice & Billing Management</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="solutions-page">
+    <!-- Header Navigation -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                    <span class="brand-text">InvoicePro</span>
+                </a>
+                
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#home" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="solutions.html">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Right Side Buttons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Theme Toggle -->
+                        <button class="btn btn-link theme-toggle" id="themeToggle">
+                            <i class="bi bi-sun-fill fs-5"></i>
+                        </button>
+                        
+                        <!-- Auth Buttons -->
+                        <a href="signup.html" class="btn btn-outline-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <a href="index.html" class="offcanvas-title text-decoration-none">
+                    <i class="bi bi-receipt-cutoff text-primary fs-4 me-2"></i>
+                    InvoicePro
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#home" id="mobileHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mobileHomeDropdown">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+                
+                <div class="mt-4">
+                    <a href="signup.html" class="btn btn-outline-primary w-100">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-4">Solutions for Every Business</h1>
+                    <p class="lead mb-4">Tailored invoicing and billing solutions designed to meet the unique needs of your industry</p>
+                    <div class="breadcrumb justify-content-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Solutions</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="industry-solutions py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Industry-Specific Solutions</h2>
+                <p class="lead">Specialized features for your business type</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h4>Freelancers & Consultants</h4>
+                        <p>Perfect for independent professionals who need simple, professional invoicing with time tracking capabilities.</p>
+                        <ul class="solution-features">
+                            <li>Time tracking integration</li>
+                            <li>Project-based billing</li>
+                            <li>Client portals</li>
+                            <li>Expense tracking</li>
+                        </ul>
+                        <a href="#signup" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="bi bi-shop"></i>
+                        </div>
+                        <h4>Small Businesses</h4>
+                        <p>Comprehensive billing solution for small businesses with inventory management and multi-user support.</p>
+                        <ul class="solution-features">
+                            <li>Inventory management</li>
+                            <li>Multi-user accounts</li>
+                            <li>Advanced reporting</li>
+                            <li>Payment processing</li>
+                        </ul>
+                        <a href="#signup" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h4>Enterprise</h4>
+                        <p>Scalable solution for large organizations with advanced security, custom integrations, and dedicated support.</p>
+                        <ul class="solution-features">
+                            <li>Advanced security</li>
+                            <li>Custom integrations</li>
+                            <li>Dedicated support</li>
+                            <li>SLA guarantee</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-primary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">How It Works</h2>
+                <p class="lead">Simple steps to get your billing organized</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <h4>Create Invoice</h4>
+                        <p>Generate professional invoices with our easy-to-use template system</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="bi bi-send"></i>
+                        </div>
+                        <h4>Send to Client</h4>
+                        <p>Email invoices directly or share via secure client portal</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <h4>Get Paid</h4>
+                        <p>Accept online payments through multiple payment gateways</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="bi bi-bar-chart"></i>
+                        </div>
+                        <h4>Track Reports</h4>
+                        <p>Monitor your business performance with detailed analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Common Use Cases</h2>
+                <p class="lead">See how businesses like yours use InvoicePro</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="use-case-item">
+                        <div class="use-case-header">
+                            <h4><i class="bi bi-brush text-primary me-2"></i>Creative Agencies</h4>
+                        </div>
+                        <p>Manage client billing for creative projects with time tracking, milestone-based invoicing, and client approval workflows.</p>
+                        <div class="use-case-features">
+                            <span class="badge bg-primary">Time Tracking</span>
+                            <span class="badge bg-primary">Project Billing</span>
+                            <span class="badge bg-primary">Client Portals</span>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-item">
+                        <div class="use-case-header">
+                            <h4><i class="bi bi-tools text-primary me-2"></i>Service Providers</h4>
+                        </div>
+                        <p>Streamline billing for recurring services, maintenance contracts, and subscription-based business models.</p>
+                        <div class="use-case-features">
+                            <span class="badge bg-primary">Recurring Invoices</span>
+                            <span class="badge bg-primary">Service Contracts</span>
+                            <span class="badge bg-primary">Automated Billing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="use-case-item">
+                        <div class="use-case-header">
+                            <h4><i class="bi bi-cart3 text-primary me-2"></i>E-commerce Businesses</h4>
+                        </div>
+                        <p>Handle wholesale invoicing, B2B billing, and integration with your existing e-commerce platform.</p>
+                        <div class="use-case-features">
+                            <span class="badge bg-primary">B2B Invoicing</span>
+                            <span class="badge bg-primary">API Integration</span>
+                            <span class="badge bg-primary">Bulk Processing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-item">
+                        <div class="use-case-header">
+                            <h4><i class="bi bi-heart-pulse text-primary me-2"></i>Healthcare Providers</h4>
+                        </div>
+                        <p>Compliant medical billing with HIPAA security, insurance claims processing, and patient billing management.</p>
+                        <div class="use-case-features">
+                            <span class="badge bg-primary">HIPAA Compliant</span>
+                            <span class="badge bg-primary">Insurance Claims</span>
+                            <span class="badge bg-primary">Patient Billing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Partners -->
+    <section class="integration-partners py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Seamless Integrations</h2>
+                <p class="lead">Connect with the tools you already use</p>
+            </div>
+            
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="integration-logo">
+                        <i class="bi bi-bank fs-1 text-primary"></i>
+                        <p>QuickBooks</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="integration-logo">
+                        <i class="bi bi-credit-card-2-back fs-1 text-primary"></i>
+                        <p>Stripe</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="integration-logo">
+                        <i class="bi bi-paypal fs-1 text-primary"></i>
+                        <p>PayPal</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="integration-logo">
+                        <i class="bi bi-globe fs-1 text-primary"></i>
+                        <p>Shopify</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="zoom-in">
+                    <h2 class="display-4 fw-bold mb-4">Find Your Perfect Solution</h2>
+                    <p class="lead mb-4">Let us help you choose the right plan for your business needs.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#signup" class="btn btn-primary btn-lg">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Start Free Trial
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                            Talk to Expert
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                            <span class="brand-text fs-4">InvoicePro</span>
+                        </div>
+                        <p class="mb-3">Professional billing and invoice management solution for modern businesses.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#api">API Docs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Stay Updated</h5>
+                    <p class="mb-3">Get the latest updates and tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom mt-4 pt-4 border-top">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2026 InvoicePro. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#privacy" class="footer-link">Privacy Policy</a>
+                        <a href="#terms" class="footer-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

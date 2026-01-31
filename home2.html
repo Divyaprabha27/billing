@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoicePro - Alternative Home</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                    <span class="brand-text">InvoicePro</span>
+                </a>
+                
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#home" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                                <li><a class="dropdown-item active" href="home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="solutions.html">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Right Side Buttons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Theme Toggle -->
+                        <button class="btn btn-link theme-toggle" id="themeToggle">
+                            <i class="bi bi-sun-fill fs-5"></i>
+                        </button>
+                        
+                        <!-- Auth Buttons -->
+                        <a href="signup.html" class="btn btn-outline-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <a href="index.html" class="offcanvas-title text-decoration-none">
+                    <i class="bi bi-receipt-cutoff text-primary fs-4 me-2"></i>
+                    InvoicePro
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#home" id="mobileHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="mobileHomeDropdown">
+                            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item active" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+                
+                <div class="mt-4">
+                    <a href="signup.html" class="btn btn-outline-primary w-100">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Alternative Design -->
+    <section id="home" class="hero-section-alt">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="hero-content-alt">
+                        <h1 class="display-2 fw-bold mb-4">
+                            Revolutionize Your <span class="text-primary">Billing Process</span>
+                        </h1>
+                        <p class="lead mb-4">
+                            Experience the future of invoice management with AI-powered automation, real-time analytics, and seamless integrations.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <a href="#signup" class="btn btn-primary btn-lg px-4">
+                                <i class="bi bi-lightning-charge me-2"></i>Get Started Free
+                            </a>
+                            <a href="#demo" class="btn btn-outline-primary btn-lg px-4">
+                                <i class="bi bi-camera-video me-2"></i>Watch Demo
+                            </a>
+                        </div>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="trust-indicators">
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="trust-item">
+                                    <i class="bi bi-shield-check text-success"></i>
+                                    <span>Bank-level Security</span>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="bi bi-clock-history text-primary"></i>
+                                    <span>Save 10+ Hours/Week</span>
+                                </div>
+                                <div class="trust-item">
+                                    <i class="bi bi-award text-warning"></i>
+                                    <span>4.9/5 Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="hero-image-alt">
+                        <div class="dashboard-mockup-alt">
+                            <img src="https://picsum.photos/seed/alternative-dashboard/500/600" alt="Alternative Dashboard" class="img-fluid rounded-4 shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Partners Section -->
+    <section class="integration-partners py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Seamless Integrations</h2>
+                <p class="lead">Connect with your favorite tools and streamline your workflow</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <div class="row g-4">
+                        <div class="col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="integration-logo">
+                                <i class="bi bi-paypal fs-1 text-primary"></i>
+                                <p class="mt-2">PayPal</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="integration-logo">
+                                <i class="bi bi-stripe fs-1 text-success"></i>
+                                <p class="mt-2">Stripe</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="integration-logo">
+                                <i class="bi bi-bank fs-1 text-info"></i>
+                                <p class="mt-2">Banks</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="integration-logo">
+                                <i class="bi bi-calendar3 fs-1 text-warning"></i>
+                                <p class="mt-2">Calendar</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="integration-logo">
+                                <i class="bi bi-envelope fs-1 text-danger"></i>
+                                <p class="mt-2">Email</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6 text-center" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="integration-logo">
+                                <i class="bi bi-cloud-arrow-up fs-1 text-secondary"></i>
+                                <p class="mt-2">Cloud Storage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorial Section -->
+    <section class="video-tutorials py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Learn at Your Own Pace</h2>
+                <p class="lead">Step-by-step video tutorials to master InvoicePro</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="video-card">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://picsum.photos/seed/getting-started/400/225" alt="Getting Started" class="img-fluid rounded">
+                            <div class="play-button position-absolute top-50 start-50 translate-middle">
+                                <i class="bi bi-play-circle fs-1 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h5>Getting Started</h5>
+                            <p class="text-muted">Learn the basics in 5 minutes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-card">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://picsum.photos/seed/advanced-features/400/225" alt="Advanced Features" class="img-fluid rounded">
+                            <div class="play-button position-absolute top-50 start-50 translate-middle">
+                                <i class="bi bi-play-circle fs-1 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h5>Advanced Features</h5>
+                            <p class="text-muted">Unlock powerful capabilities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="video-card">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://picsum.photos/seed/tips-tricks/400/225" alt="Tips & Tricks" class="img-fluid rounded">
+                            <div class="play-button position-absolute top-50 start-50 translate-middle">
+                                <i class="bi bi-play-circle fs-1 text-white"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h5>Tips & Tricks</h5>
+                            <p class="text-muted">Work smarter, not harder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Success Stories Section -->
+    <section class="success-stories py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Success Stories</h2>
+                <p class="lead">Real results from real businesses</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="story-card p-4 border rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://picsum.photos/seed/customer1/60/60" alt="Customer" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <p class="text-muted mb-0">CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                        <blockquote class="mb-0">
+                            "InvoicePro transformed our billing process. We save 15+ hours per week and get paid 40% faster."
+                        </blockquote>
+                        <div class="mt-3">
+                            <span class="badge bg-success">+40% Faster Payments</span>
+                            <span class="badge bg-primary ms-2">-15 Hours/Week</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="story-card p-4 border rounded">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://picsum.photos/seed/customer2/60/60" alt="Customer" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">Michael Chen</h5>
+                                <p class="text-muted mb-0">Founder, Creative Agency</p>
+                            </div>
+                        </div>
+                        <blockquote class="mb-0">
+                            "The automation features are incredible. Our clients love the professional invoices and we love the time savings."
+                        </blockquote>
+                        <div class="mt-3">
+                            <span class="badge bg-info">95% Client Satisfaction</span>
+                            <span class="badge bg-warning ms-2">+200% Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions Section -->
+    <section class="industry-solutions py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-3">Built for Every Industry</h2>
+                <p class="lead">Specialized solutions tailored to your business needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="industry-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-briefcase fs-1 text-primary mb-3"></i>
+                        <h5>Consulting</h5>
+                        <p class="text-muted">Perfect for consultants and freelancers</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="industry-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-hammer fs-1 text-success mb-3"></i>
+                        <h5>Construction</h5>
+                        <p class="text-muted">Manage project billing and materials</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="industry-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-heart-pulse fs-1 text-danger mb-3"></i>
+                        <h5>Healthcare</h5>
+                        <p class="text-muted">HIPAA-compliant billing solutions</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="400">
+                    <div class="industry-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <i class="bi bi-shop fs-1 text-warning mb-3"></i>
+                        <h5>Retail</h5>
+                        <p class="text-muted">Streamline retail invoicing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Trial CTA Section -->
+    <section class="free-trial-cta py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="trial-offer p-5 rounded text-center" data-aos="zoom-in">
+                        <h2 class="display-4 fw-bold mb-4">Start Your 30-Day Free Trial</h2>
+                        <p class="lead mb-4">No credit card required. Full access to all features.</p>
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-md-8">
+                                <div class="row text-start">
+                                    <div class="col-6 mb-3">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Unlimited invoices
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        All premium features
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Priority support
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                        Cancel anytime
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#signup" class="btn btn-primary btn-lg">
+                                <i class="bi bi-rocket-takeoff me-2"></i>Start Free Trial
+                            </a>
+                            <a href="#demo" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-camera-video me-2"></i>Request Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                            <span class="brand-text fs-4">InvoicePro</span>
+                        </div>
+                        <p class="mb-3">Professional billing and invoice management solution for modern businesses.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="footer-links">
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#api">API Docs</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Stay Updated</h5>
+                    <p class="mb-3">Get the latest updates and tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom mt-4 pt-4 border-top">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2026 InvoicePro. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#privacy" class="footer-link">Privacy Policy</a>
+                        <a href="#terms" class="footer-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+        
