@@ -1266,6 +1266,15 @@ body.dark-mode .offcanvas .dropdown-item.active {
     color: white;
 }
 
+/* Hide Hamburger Menu in Web/Desktop View */
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
 /* Force Mobile Menu Display */
 @media (max-width: 991px) {
     .navbar-toggler {
