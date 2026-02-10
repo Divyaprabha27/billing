@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Solutions - InvoicePro | Smart Invoice & Billing Management</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="solutions-page">
     <!-- Header Navigation -->
     <header class="header sticky-top">
@@ -24,17 +27,18 @@
                     <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
                     <span class="brand-text">InvoicePro</span>
                 </a>
-                
+
                 <!-- Mobile Toggle Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <!-- Desktop Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#home" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#home" id="homeDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Home
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="homeDropdown">
@@ -61,34 +65,33 @@
                             <a class="nav-link" href="dashboard.html">Dashboard</a>
                         </li>
                     </ul>
-                    
+
                     <!-- Right Side Buttons -->
                     <div class="d-flex align-items-center gap-3">
                         <!-- Theme Toggle -->
                         <button class="btn btn-link theme-toggle" id="themeToggle">
                             <i class="bi bi-sun-fill fs-5"></i>
                         </button>
-                        
+
                         <!-- Auth Buttons -->
                         <a href="signup.html" class="btn btn-outline-primary">Sign Up</a>
                     </div>
                 </div>
             </div>
         </nav>
-        
+
         <!-- Mobile Offcanvas Menu -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
             <div class="offcanvas-header">
-                <a href="index.html" class="offcanvas-title text-decoration-none">
-                    <i class="bi bi-receipt-cutoff text-primary fs-4 me-2"></i>
-                    InvoicePro
-                </a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#home" id="mobileHomeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#home" id="mobileHomeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Home
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="mobileHomeDropdown">
@@ -115,7 +118,7 @@
                         <a class="nav-link" href="dashboard.html">Dashboard</a>
                     </li>
                 </ul>
-                
+
                 <div class="mt-4">
                     <a href="signup.html" class="btn btn-outline-primary w-100">Sign Up</a>
                 </div>
@@ -129,7 +132,8 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
                     <h1 class="display-3 fw-bold mb-4">Solutions for Every Business</h1>
-                    <p class="lead mb-4">Tailored invoicing and billing solutions designed to meet the unique needs of your industry</p>
+                    <p class="lead mb-4">Tailored invoicing and billing solutions designed to meet the unique needs of
+                        your industry</p>
                     <div class="breadcrumb justify-content-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -150,7 +154,7 @@
                 <h2 class="display-4 fw-bold mb-3">Industry-Specific Solutions</h2>
                 <p class="lead">Specialized features for your business type</p>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="solution-card">
@@ -158,7 +162,8 @@
                             <i class="bi bi-laptop"></i>
                         </div>
                         <h4>Freelancers & Consultants</h4>
-                        <p>Perfect for independent professionals who need simple, professional invoicing with time tracking capabilities.</p>
+                        <p>Perfect for independent professionals who need simple, professional invoicing with time
+                            tracking capabilities.</p>
                         <ul class="solution-features">
                             <li>Time tracking integration</li>
                             <li>Project-based billing</li>
@@ -168,14 +173,15 @@
                         <a href="#signup" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="solution-card">
                         <div class="solution-icon">
                             <i class="bi bi-shop"></i>
                         </div>
                         <h4>Small Businesses</h4>
-                        <p>Comprehensive billing solution for small businesses with inventory management and multi-user support.</p>
+                        <p>Comprehensive billing solution for small businesses with inventory management and multi-user
+                            support.</p>
                         <ul class="solution-features">
                             <li>Inventory management</li>
                             <li>Multi-user accounts</li>
@@ -185,14 +191,15 @@
                         <a href="#signup" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="solution-card">
                         <div class="solution-icon">
                             <i class="bi bi-building"></i>
                         </div>
                         <h4>Enterprise</h4>
-                        <p>Scalable solution for large organizations with advanced security, custom integrations, and dedicated support.</p>
+                        <p>Scalable solution for large organizations with advanced security, custom integrations, and
+                            dedicated support.</p>
                         <ul class="solution-features">
                             <li>Advanced security</li>
                             <li>Custom integrations</li>
@@ -213,7 +220,7 @@
                 <h2 class="display-4 fw-bold mb-3">How It Works</h2>
                 <p class="lead">Simple steps to get your billing organized</p>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-card">
@@ -225,7 +232,7 @@
                         <p>Generate professional invoices with our easy-to-use template system</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="step-card">
                         <div class="step-number">2</div>
@@ -236,7 +243,7 @@
                         <p>Email invoices directly or share via secure client portal</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-card">
                         <div class="step-number">3</div>
@@ -247,7 +254,7 @@
                         <p>Accept online payments through multiple payment gateways</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="step-card">
                         <div class="step-number">4</div>
@@ -269,26 +276,28 @@
                 <h2 class="display-4 fw-bold mb-3">Common Use Cases</h2>
                 <p class="lead">See how businesses like yours use InvoicePro</p>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="use-case-item">
                         <div class="use-case-header">
                             <h4><i class="bi bi-brush text-primary me-2"></i>Creative Agencies</h4>
                         </div>
-                        <p>Manage client billing for creative projects with time tracking, milestone-based invoicing, and client approval workflows.</p>
+                        <p>Manage client billing for creative projects with time tracking, milestone-based invoicing,
+                            and client approval workflows.</p>
                         <div class="use-case-features">
                             <span class="badge bg-primary">Time Tracking</span>
                             <span class="badge bg-primary">Project Billing</span>
                             <span class="badge bg-primary">Client Portals</span>
                         </div>
                     </div>
-                    
+
                     <div class="use-case-item mt-4">
                         <div class="use-case-header">
                             <h4><i class="bi bi-tools text-primary me-2"></i>Service Providers</h4>
                         </div>
-                        <p>Streamline billing for recurring services, maintenance contracts, and subscription-based business models.</p>
+                        <p>Streamline billing for recurring services, maintenance contracts, and subscription-based
+                            business models.</p>
                         <div class="use-case-features">
                             <span class="badge bg-primary">Recurring Invoices</span>
                             <span class="badge bg-primary">Service Contracts</span>
@@ -296,25 +305,27 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="use-case-item">
                         <div class="use-case-header">
                             <h4><i class="bi bi-cart3 text-primary me-2"></i>E-commerce Businesses</h4>
                         </div>
-                        <p>Handle wholesale invoicing, B2B billing, and integration with your existing e-commerce platform.</p>
+                        <p>Handle wholesale invoicing, B2B billing, and integration with your existing e-commerce
+                            platform.</p>
                         <div class="use-case-features">
                             <span class="badge bg-primary">B2B Invoicing</span>
                             <span class="badge bg-primary">API Integration</span>
                             <span class="badge bg-primary">Bulk Processing</span>
                         </div>
                     </div>
-                    
+
                     <div class="use-case-item mt-4">
                         <div class="use-case-header">
                             <h4><i class="bi bi-heart-pulse text-primary me-2"></i>Healthcare Providers</h4>
                         </div>
-                        <p>Compliant medical billing with HIPAA security, insurance claims processing, and patient billing management.</p>
+                        <p>Compliant medical billing with HIPAA security, insurance claims processing, and patient
+                            billing management.</p>
                         <div class="use-case-features">
                             <span class="badge bg-primary">HIPAA Compliant</span>
                             <span class="badge bg-primary">Insurance Claims</span>
@@ -333,7 +344,7 @@
                 <h2 class="display-4 fw-bold mb-3">Seamless Integrations</h2>
                 <p class="lead">Connect with the tools you already use</p>
             </div>
-            
+
             <div class="row text-center">
                 <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="integration-logo">
@@ -403,7 +414,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Company Links -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="footer-heading">Company</h5>
@@ -414,7 +425,7 @@
                         <li><a href="#press">Press</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Support Links -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="footer-heading">Support</h5>
@@ -425,7 +436,7 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Newsletter -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="footer-heading">Stay Updated</h5>
@@ -440,7 +451,7 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="footer-bottom mt-4 pt-4 border-top">
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -453,7 +464,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Back to Top Button -->
         <button class="back-to-top" id="backToTop">
             <i class="bi bi-arrow-up"></i>
@@ -464,7 +475,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

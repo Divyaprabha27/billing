@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Dashboard - InvoicePro | Smart Invoice & Billing Management</title>
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -13,49 +15,102 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+
     <link rel="stylesheet" href="styles.css">
+<style>
+    body.dark-mode .brand-text {
+    color: var(--text-dark) !important;
+}
+</style>
 </head>
+
 <body>
     <!-- Dashboard Header -->
     <header class="dashboard-header">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between">
                         <!-- Logo -->
-                        <a href="index.html" class="dashboard-logo me-3 text-decoration-none">
-                            <i class="bi bi-receipt-cutoff text-primary fs-2"></i>
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <i class="bi bi-receipt-cutoff text-primary fs-3 me-2"></i>
+                            <span class="brand-text">InvoicePro</span>
                         </a>
-                        <a href="index.html" class="text-decoration-none">
-                            <h1 class="dashboard-title">InvoicePro</h1>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="d-flex align-items-center justify-content-md-end gap-3">
-                        <!-- Theme Toggle -->
-                        <button class="btn btn-link theme-toggle" id="themeToggle">
-                            <i class="bi bi-sun-fill fs-5"></i>
-                        </button>
-                        
-                        <!-- User Menu -->
-                        <div class="dropdown">
-                            <button class="btn btn-link dropdown-toggle d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown">
-                                <i class="bi bi-person-circle fs-5"></i>
+
+                        <!-- Theme Toggle & Mobile Hamburger Menu -->
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- Theme Toggle -->
+                            <button class="btn btn-link theme-toggle" id="themeToggle">
+                                <i class="bi bi-sun-fill fs-5"></i>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="index.html"><i class="bi bi-person me-2"></i>Profile</a></li>
-                                <li><a class="dropdown-item" href="index.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
-                            </ul>
+
+                            <!-- Mobile Hamburger Menu -->
+                            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileDashboardMenu">
+                                <i class="bi bi-list fs-5"></i>
+                            </button>
+
+                            <!-- Desktop User Menu -->
+                            <div class="dropdown d-none d-md-block">
+                                <button class="btn btn-link dropdown-toggle d-flex align-items-center" type="button"
+                                    id="userDropdown" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person-circle fs-5"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="index.html"><i
+                                                class="bi bi-person me-2"></i>Profile</a></li>
+                                    <li><a class="dropdown-item" href="index.html"><i
+                                                class="bi bi-gear me-2"></i>Settings</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="index.html"><i
+                                                class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileDashboardMenu">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#overview">
+                        <i class="bi bi-speedometer2 me-2"></i>Overview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#invoices">
+                        <i class="bi bi-file-earmark-text me-2"></i>Invoices
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#clients">
+                        <i class="bi bi-people me-2"></i>Clients
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#payments">
+                        <i class="bi bi-credit-card me-2"></i>Payments
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reports">
+                        <i class="bi bi-graph-up me-2"></i>Reports
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Dashboard Content -->
     <section class="dashboard-main py-4">
@@ -104,7 +159,8 @@
                     <!-- Overview Section -->
                     <div id="overview" class="content-section">
                         <!-- Page Header -->
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Dashboard Overview</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <div class="btn-group me-2">
@@ -129,7 +185,8 @@
                                             <div class="ms-3">
                                                 <h6 class="stats-label">Total Revenue</h6>
                                                 <h3 class="stats-value">$45,231</h3>
-                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 12% from last month</small>
+                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 12% from last
+                                                    month</small>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +202,8 @@
                                             <div class="ms-3">
                                                 <h6 class="stats-label">Paid Invoices</h6>
                                                 <h3 class="stats-value">142</h3>
-                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 8% from last month</small>
+                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 8% from last
+                                                    month</small>
                                             </div>
                                         </div>
                                     </div>
@@ -161,7 +219,8 @@
                                             <div class="ms-3">
                                                 <h6 class="stats-label">Pending Invoices</h6>
                                                 <h3 class="stats-value">28</h3>
-                                                <small class="text-warning"><i class="bi bi-arrow-down"></i> 3% from last month</small>
+                                                <small class="text-warning"><i class="bi bi-arrow-down"></i> 3% from
+                                                    last month</small>
                                             </div>
                                         </div>
                                     </div>
@@ -177,7 +236,8 @@
                                             <div class="ms-3">
                                                 <h6 class="stats-label">Active Clients</h6>
                                                 <h3 class="stats-value">89</h3>
-                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 15% from last month</small>
+                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 15% from last
+                                                    month</small>
                                             </div>
                                         </div>
                                     </div>
@@ -235,8 +295,10 @@
                                                 <td><span class="badge bg-success">Paid</span></td>
                                                 <td>Dec 15, 2023</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                                    <button class="btn btn-sm btn-outline-primary"><i
+                                                            class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary"><i
+                                                            class="bi bi-download"></i></button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -246,8 +308,10 @@
                                                 <td><span class="badge bg-warning">Pending</span></td>
                                                 <td>Dec 18, 2023</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                                    <button class="btn btn-sm btn-outline-primary"><i
+                                                            class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary"><i
+                                                            class="bi bi-download"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -259,7 +323,8 @@
 
                     <!-- Invoices Section -->
                     <div id="invoices" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Invoices</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <button type="button" class="btn btn-primary btn-sm">
@@ -293,8 +358,10 @@
                                                 <td><span class="badge bg-success">Paid</span></td>
                                                 <td>Dec 15, 2023</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                                    <button class="btn btn-sm btn-outline-primary"><i
+                                                            class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary"><i
+                                                            class="bi bi-download"></i></button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -304,8 +371,10 @@
                                                 <td><span class="badge bg-warning">Pending</span></td>
                                                 <td>Dec 20, 2023</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                                    <button class="btn btn-sm btn-outline-primary"><i
+                                                            class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary"><i
+                                                            class="bi bi-download"></i></button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -315,8 +384,10 @@
                                                 <td><span class="badge bg-danger">Overdue</span></td>
                                                 <td>Dec 10, 2023</td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
-                                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
+                                                    <button class="btn btn-sm btn-outline-primary"><i
+                                                            class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-outline-secondary"><i
+                                                            class="bi bi-download"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -328,7 +399,8 @@
 
                     <!-- Clients Section -->
                     <div id="clients" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Clients</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <button type="button" class="btn btn-primary btn-sm">
@@ -342,7 +414,8 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-3">
-                                            <div class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                            <div class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                                style="width: 50px; height: 50px;">
                                                 JD
                                             </div>
                                             <div class="ms-3">
@@ -371,7 +444,8 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-3">
-                                            <div class="avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                            <div class="avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center"
+                                                style="width: 50px; height: 50px;">
                                                 JS
                                             </div>
                                             <div class="ms-3">
@@ -401,7 +475,8 @@
 
                     <!-- Payments Section -->
                     <div id="payments" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Payments</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <button type="button" class="btn btn-primary btn-sm">
@@ -453,7 +528,8 @@
 
                     <!-- Reports Section -->
                     <div id="reports" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Reports</h1>
                             <div class="btn-toolbar mb-2 mb-md-0">
                                 <button type="button" class="btn btn-primary btn-sm">
@@ -469,7 +545,8 @@
                                         <h5 class="card-title mb-0">Monthly Revenue Report</h5>
                                     </div>
                                     <div class="card-body">
-                                        <p class="text-muted">Generate detailed monthly revenue reports with insights and trends.</p>
+                                        <p class="text-muted">Generate detailed monthly revenue reports with insights
+                                            and trends.</p>
                                         <button class="btn btn-outline-primary btn-sm">Generate</button>
                                     </div>
                                 </div>
@@ -480,7 +557,8 @@
                                         <h5 class="card-title mb-0">Client Performance</h5>
                                     </div>
                                     <div class="card-body">
-                                        <p class="text-muted">Analyze client performance and identify top revenue generators.</p>
+                                        <p class="text-muted">Analyze client performance and identify top revenue
+                                            generators.</p>
                                         <button class="btn btn-outline-primary btn-sm">Generate</button>
                                     </div>
                                 </div>
@@ -490,7 +568,8 @@
 
                     <!-- Settings Section -->
                     <div id="settings" class="content-section" style="display: none;">
-                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                             <h1 class="h2">Settings</h1>
                         </div>
 
@@ -504,11 +583,13 @@
                                         <form>
                                             <div class="mb-3">
                                                 <label for="companyName" class="form-label">Company Name</label>
-                                                <input type="text" class="form-control" id="companyName" value="InvoicePro Inc.">
+                                                <input type="text" class="form-control" id="companyName"
+                                                    value="InvoicePro Inc.">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" value="admin@invoicepro.com">
+                                                <input type="email" class="form-control" id="email"
+                                                    value="admin@invoicepro.com">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="currency" class="form-label">Default Currency</label>
@@ -520,20 +601,22 @@
                                             </div>
                                             <button type="submit" class="btn btn-primary">Save Changes</button>
                                         </form>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>#INV-004</strong></td>
-                                                    <td>StartUp Co.</td>
-                                                    <td>$850.00</td>
-                                                    <td><span class="badge bg-success">Paid</span></td>
-                                                    <td>Dec 18, 2023</td>
-                                                    <td>
-                                                        <button class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i></button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#INV-004</strong></td>
+                                            <td>StartUp Co.</td>
+                                            <td>$850.00</td>
+                                            <td><span class="badge bg-success">Paid</span></td>
+                                            <td>Dec 18, 2023</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary"><i
+                                                        class="bi bi-eye"></i></button>
+                                                <button class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-download"></i></button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -549,31 +632,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <script src="script.js"></script>
     <script>
         // Dashboard Navigation Functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Handle navigation clicks
             const navLinks = document.querySelectorAll('.sidebar .nav-link');
             const contentSections = document.querySelectorAll('.content-section');
-            
+
             navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     // Get target section ID
                     const targetId = this.getAttribute('href').substring(1);
-                    
+
                     // Remove active class from all links
                     navLinks.forEach(navLink => navLink.classList.remove('active'));
-                    
+
                     // Add active class to clicked link
                     this.classList.add('active');
-                    
+
                     // Hide all content sections
                     contentSections.forEach(section => section.style.display = 'none');
-                    
+
                     // Show target section
                     const targetSection = document.getElementById(targetId);
                     if (targetSection) {
@@ -581,7 +664,7 @@
                     }
                 });
             });
-            
+
             // Initialize Charts
             // Revenue Chart
             const revenueCtx = document.getElementById('revenueChart').getContext('2d');
@@ -610,7 +693,7 @@
                         y: {
                             beginAtZero: true,
                             ticks: {
-                                callback: function(value) {
+                                callback: function (value) {
                                     return '$' + value.toLocaleString();
                                 }
                             }
@@ -648,4 +731,5 @@
         });
     </script>
 </body>
+
 </html>
