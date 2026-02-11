@@ -1,5 +1,6 @@
 // Theme Toggle Functionality
 const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
 const body = document.body;
 
 // Check for saved theme preference or default to light mode
@@ -7,25 +8,56 @@ const currentTheme = localStorage.getItem('theme') || 'light';
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
     updateThemeIcon(true);
+    updateMobileThemeIcon(true);
 }
 
 // Update theme icon function
 function updateThemeIcon(isDark) {
-    const icon = themeToggle.querySelector('i');
-    if (isDark) {
-        icon.className = 'bi bi-moon-fill fs-5';
-    } else {
-        icon.className = 'bi bi-sun-fill fs-5';
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
+        if (isDark) {
+            icon.className = 'bi bi-moon-fill fs-5';
+        } else {
+            icon.className = 'bi bi-sun-fill fs-5';
+        }
+    }
+}
+
+// Update mobile theme icon function
+function updateMobileThemeIcon(isDark) {
+    if (themeToggleMobile) {
+        const icon = themeToggleMobile.querySelector('i');
+        if (isDark) {
+            icon.className = 'bi bi-moon-fill fs-5';
+        } else {
+            icon.className = 'bi bi-sun-fill fs-5';
+        }
     }
 }
 
 // Theme toggle event listener
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    updateThemeIcon(isDark);
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        updateThemeIcon(isDark);
+        updateMobileThemeIcon(isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        console.log('Desktop theme toggled:', isDark ? 'dark' : 'light');
+    });
+}
+
+// Mobile theme toggle event listener
+if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        updateThemeIcon(isDark);
+        updateMobileThemeIcon(isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        console.log('Mobile theme toggled:', isDark ? 'dark' : 'light');
+    });
+}
 
 // Initialize AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', () => {

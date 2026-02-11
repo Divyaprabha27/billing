@@ -710,6 +710,31 @@ body.dark-mode {
 }
 
 /* Responsive Design for Home2 */
+
+/* Tablet View */
+@media (max-width: 992px) {
+    .hero-title-alt {
+        font-size: 3rem;
+    }
+    
+    .hero-container {
+        gap: 3rem;
+    }
+    
+    .integration-partners .row {
+        gap: 2rem;
+    }
+    
+    .success-stories .row {
+        gap: 2rem;
+    }
+    
+    .industry-solutions .row {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
     .hero-title-alt {
         font-size: 2.5rem;
@@ -722,6 +747,8 @@ body.dark-mode {
     
     .hero-stats {
         justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
     }
     
     .floating-cards {
@@ -746,5 +773,89 @@ body.dark-mode {
     
     .companies-carousel {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Video Tutorials Mobile */
+    .video-tutorials .row {
+        gap: 1.5rem;
+    }
+    
+    .video-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Success Stories Mobile */
+    .success-stories .row {
+        gap: 1.5rem;
+    }
+    
+    .success-stories .story-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Industry Solutions Mobile */
+    .industry-solutions .row {
+        gap: 1.5rem;
+    }
+    
+    .industry-solutions .industry-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Hero Buttons Mobile */
+    .hero-buttons-alt {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .hero-buttons-alt .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Trust Indicators Mobile */
+    .trust-indicators {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .trust-indicators .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 576px) {
+    .hero-title-alt {
+        font-size: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons-alt .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .companies-carousel {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .integration-partners .row {
+        gap: 1rem;
+    }
+    
+    .integration-partners .col-md-4 {
+        margin-bottom: 1rem;
     }
 }

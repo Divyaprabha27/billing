@@ -28,11 +28,6 @@
                     <span class="brand-text">InvoicePro</span>
                 </a>
 
-                <!-- Mobile Toggle Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
                 <!-- Desktop Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -76,6 +71,19 @@
                         <!-- Auth Buttons -->
                         <a href="signup.html" class="btn btn-outline-primary">Sign Up</a>
                     </div>
+                </div>
+
+                <!-- Mobile & Theme Toggle Buttons -->
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Theme Toggle (Tablet & Mobile Only) -->
+                    <button class="btn btn-link theme-toggle-mobile d-none d-lg-block" id="themeToggleMobile">
+                        <i class="bi bi-sun-fill fs-5"></i>
+                    </button>
+                    
+                    <!-- Mobile Toggle Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -151,7 +159,7 @@
                 <div class="col-lg-8 mb-4" data-aos="fade-right">
                     <div class="card">
                         <div class="card-body p-4">
-                            <h3 class="card-title mb-4">Send us a Message</h3>
+                            <h3 class="card-title text-center mb-4">Send us a Message</h3>
                             <form id="contactForm">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
