@@ -1712,7 +1712,7 @@ body.dark-mode .industry-solutions .solution-card:hover .solution-icon {
     }
     
     .btn-lg {
-        padding: 0.75rem 1.5rem !important;
+        
         font-size: 0.9rem !important;
     }
 }
@@ -1875,6 +1875,51 @@ body.dark-mode .industry-solutions .solution-card:hover .solution-icon {
     .navbar-nav .nav-link {
         font-size: 0.9rem !important;
         padding: 0.5rem 1rem !important;
+    }
+}
+
+/* Reduce space between menu items from 1119px to 992px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-nav {
+        align-items: center !important;
+        margin: 0 !important;
+        gap: 0.25rem !important;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0 !important;
+        padding: 0.25rem 0.5rem !important; /* Added little space */
+    }
+    
+    .navbar-nav .nav-link {
+        display: flex !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        padding: 0.25rem 0.5rem !important; /* Added little space */
+        margin: 0 !important;
+    }
+}
+    
+    /* Reduce space between menu items from 1119px to 992px */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .navbar-nav {
+            align-items: center !important;
+            margin: 0 !important;
+            gap: 0.25rem !important;
+        }
+        
+        .navbar-nav .nav-item {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .navbar-nav .nav-link {
+            display: flex !important;
+            align-items: center !important;
+            white-space: nowrap !important;
+            padding: 0 15px !important;
+            margin: 0 !important;
+        }
     }
 }
 
@@ -3792,6 +3837,29 @@ body.dark-mode .resources-page .resource-card p {
 #contactForm button[type="submit"] {
     display: block;
     margin: 0 auto;
+}
+
+/* Home Pages - Hero Section Buttons Centering in Tab & Mobile View */
+@media (max-width: 991px) {
+    .hero-section .d-flex.flex-wrap.gap-3.mb-4 {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .hero-section-alt .d-flex.flex-wrap.gap-3.mb-4 {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .hero-section .btn,
+    .hero-section-alt .btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 50px !important; /* Consistent height */
+        min-height: 50px !important;
+        line-height: 50px !important;
+    }
 }
 
 /* Pricing Page - Fix Most Popular Card Border in Mobile View */
